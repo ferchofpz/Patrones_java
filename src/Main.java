@@ -10,7 +10,18 @@ public class Main {
     public static void main(String[] args) {
         
         // probarFactoryMethod();
-        probarAbstractFactoryMethod();
+        // probarAbstractFactoryMethod();
+        probarBuilder();
+    }
+
+    private static void probarBuilder(){
+        creational.builder.Card card = new creational.builder.Card.CardBuilder("VISA","0000 0000 0000")
+                .name("Fernando")
+                .expires(2023)
+                .credit(true)
+                .build();
+
+        System.out.println(card);
     }
 
     private static void probarAbstractFactoryMethod() {
